@@ -1,0 +1,29 @@
+{
+  "name": "testfit",
+  "version": "0.0.0",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "NODE_ENV=dev && node ./bin/www",
+    "test": "mocha --bail --timeout 10000"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "chai-things": "^0.2.0",
+    "config": "^2.0.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "mocha": "^5.2.0",
+    "moment": "^2.22.2",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.2.8",
+    "morgan": "^1.9.0",
+    "npm": "^6.4.0",
+    "underscore": "^1.9.1"
+  }
+}
