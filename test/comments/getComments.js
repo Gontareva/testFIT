@@ -2,7 +2,7 @@
 process.env.NODE_ENV = 'test';
 
 let mongoose = require("mongoose");
-let Comment = require('../../models/comment');
+let Comments = require('../../models/comments');
 
 //Подключаем dev-dependencies
 let chai = require('chai');
@@ -29,7 +29,7 @@ module.exports = () => {
         });
 
         it('it should GET a comment by the given name', (done) => {
-            let comment = new Comment({name: "Ana", text: "comment"});
+            let comment = new Comments({name: "Ana", text: "comment"});
             comment.save((err, comment) => {
                 chai.request(app)
                     .get('/comments')
@@ -48,7 +48,7 @@ module.exports = () => {
         });
 
         it('it should GET a comment by the given text', (done) => {
-            let comment = new Comment({name: "Ann", text: "text comment"});
+            let comment = new Comments({name: "Ann", text: "text comment"});
             comment.save((err, comment) => {
                 chai.request(app)
                     .get('/comments')
@@ -67,7 +67,7 @@ module.exports = () => {
         });
 
         it('it should GET a comment by the given createdAt', (done) => {
-            let comment = new Comment({name: "Jane", text: "text"});
+            let comment = new Comments({name: "Jane", text: "text"});
             comment.save((err, comment) => {
                 chai.request(app)
                     .get('/comments')
@@ -86,7 +86,7 @@ module.exports = () => {
         });
 
         it('it should GET a comment by the given name and createdAt', (done) => {
-            let comment = new Comment({name: "Helen", text: "hi"});
+            let comment = new Comments({name: "Helen", text: "hi"});
             comment.save((err, comment) => {
                 chai.request(app)
                     .get('/comments')
